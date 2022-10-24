@@ -153,7 +153,7 @@ void render(std::vector<Sphere> &s, std::vector<Light> &l, int recursion_depth) 
 	std::cout << "Done creating framebuffer!" << std::endl;
 
 	std::ofstream ofs; // save the framebuffer to file
-	ofs.open("./out_test.ppm");
+	ofs.open("./out_test_test.ppm");
 	ofs << "P6\n" << width << " " << height << "\n255\n";
 	for (size_t i = 0; i < height * width; ++i) {
 		for (size_t j = 0; j < 3; j++) {

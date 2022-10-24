@@ -1,0 +1,82 @@
+{
+	"version": "0.2.0",
+	"configurations": [
+		{
+			"type": "gdb",
+			"request": "attach",
+			"name": "Attach to PID",
+			"target": "[PID]",
+			"cwd": "${workspaceRoot}",
+			"valuesFormatting": "parseText"
+		},
+		{
+			"name": "clang++ - build and debug active file",
+			"type": "lldb",
+			"request": "launch",
+			"program": "${fileDirname}/${fileBasenameNoExtension}",
+			"args": [],
+			"cwd": "${fileDirname}",
+			"terminal": "integrated",
+			"preLaunchTask": "clang++ build active file"
+		},
+		{
+			"name": "clang - build and debug active file",
+			"type": "lldb",
+			"request": "launch",
+			"program": "${fileDirname}/${fileBasenameNoExtension}",
+			"args": [],
+			"cwd": "${fileDirname}",
+			"terminal": "integrated",
+			"preLaunchTask": "clang build active file"
+		},
+		{
+			"name": "clang++ - Build and debug active file",
+			"type": "cppdbg",
+			// "type": "lldb",
+			"request": "launch",
+			"program": "${fileDirname}/${fileBasenameNoExtension}",
+			"args": [],
+			"stopAtEntry": true,
+			"cwd": "${workspaceFolder}",
+			// "cwd": "${fileDirname}",
+			"environment": [],
+			"externalConsole": true,
+			// "terminal": "integrated",
+			"MIMode": "lldb",
+			// "setupCommands": [
+			//   {
+			//     "text": "settings set target.input-path main_test.in"
+			//   }
+			// ],
+			"preLaunchTask": "clang++ build active file",
+			// "console": "integratedTerminal",
+		},
+		{
+			"name": "clang - Build and debug active file",
+			"type": "cppdbg",
+			"request": "launch",
+			"program": "${fileDirname}/${fileBasenameNoExtension}",
+			"args": [],
+			"stopAtEntry": true,
+			"cwd": "${workspaceFolder}",
+			"environment": [],
+			"externalConsole": false,
+			"MIMode": "lldb",
+			"preLaunchTask": "clang build active file"
+		},
+		{
+			"name": "C/C++ Runner: Debug Session",
+			"type": "cppdbg",
+			"request": "launch",
+			"args": [],
+			"stopAtEntry": false,
+			"cwd": "/Users/batman/Documents/Programming Courses/Mostafa Saad Ibrahim/Mastering 4 critical SKILLS using C++ 17/Multidimensional Arrays/Homework/test",
+			"environment": [],
+			"program": "/Users/batman/Documents/Programming Courses/Mostafa Saad Ibrahim/Mastering 4 critical SKILLS using C++ 17/Multidimensional Arrays/Homework/test/build/Debug/outDebug",
+			"internalConsoleOptions": "openOnSessionStart",
+			"MIMode": "gdb",
+			"miDebuggerPath": "gdb",
+			"externalConsole": false
+		},
+	]
+}
